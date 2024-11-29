@@ -1,8 +1,80 @@
 {% extends 'base.html' %}
-{% block title %}
-Home
-{% endblock %}
-{% block content %}
-<h4>This is the content of the index page</h4>
+{% load static %}
+{% block title %}Home{% endblock %}
 
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh; background-color: white;">
+  <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" style="width: 80%;">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'media/courscel_img_1.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+            <div class="card-body text-dark">
+              <h3 class="card-title">Stay Safe</h3>
+              <h6 class="card-subtitle mb-2 text-muted">Protecting Citizens First</h6>
+              <p class="card-text">
+                We prioritize the safety of every citizen by ensuring all our products meet the highest safety standards. Our commitment to protection extends to every household and community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'media/courscel_img_2.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+            <div class="card-body text-dark">
+              <h3 class="card-title">Safety First</h3>
+              <h6 class="card-subtitle mb-2 text-muted">Protecting Lives Through Innovation</h6>
+              <p class="card-text">
+                Our solutions are designed to safeguard lives. With innovative engineering and rigorous testing, we ensure protection is delivered seamlessly, keeping citizens safe from potential hazards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Slide -->
+      <div class="carousel-item">
+        <img src="{% static 'media/courscel_img_3.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+            <div class="card-body text-dark">
+              <h3 class="card-title">Trusted Solutions</h3>
+              <h6 class="card-subtitle mb-2 text-muted">A Future of Security and Trust</h6>
+              <p class="card-text">
+                Our trusted solutions are built for citizens’ peace of mind. We stand by our commitment to protect, serve, and empower communities through safe and reliable technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
 {% endblock %}

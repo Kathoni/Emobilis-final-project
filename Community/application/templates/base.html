@@ -8,15 +8,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'style/bootstrap/css/bootstrap.min.css' %}">
+
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: rgba(255,255,255,0.5);">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="{% url 'index' %}">Brand</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
@@ -48,9 +52,14 @@
     {% block content %}
     {% endblock %}
 
-    <footer>
-        <h2>This is the application footer</h2>
-        <p>The footer is uniform across the web pages</p>
+    <footer style="flex: auto; display: flex; align-items: end; justify-content: center; background-color: olivedrab;">
+        <ul style="list-style: none; gap: 50px; padding: 0;">
+            <li><a href="#"><i class="bi bi-linkedin" aria-label="LinkedIn"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a></li>
+            <li><p>Copyright &copy; 2024</p></li>
+        </ul>
+
     </footer>
 
     <!-- Bootstrap JS and Popper.js -->
