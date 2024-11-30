@@ -1,9 +1,12 @@
 from django import forms
 
 from application.models import Citizen
+from django.contrib.auth.forms import UserCreationForm
+
+from application.models import CrimeReport
 
 
-class StudentForm(forms.ModelForm):
+class CitizenForm(forms.ModelForm):
     class Meta:
         model = Citizen
         fields = '__all__'
@@ -18,3 +21,18 @@ class StudentForm(forms.ModelForm):
                 'accept': 'image/*',
                 'title': 'Upload image here'})
         }
+
+
+class RegistrationForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = Citizen
+        fields = ['name', 'email', 'password1', 'password2']
+
+
+
+class CrimeReportForm(forms.ModelForm):
+    class Meta:
+        model = CrimeReport
+        fields = ['title', 'description', 'location']

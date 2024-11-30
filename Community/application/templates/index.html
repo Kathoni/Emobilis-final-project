@@ -3,9 +3,9 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh; background-color: white;">
+<!-- Carousel Section -->
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: white;">
   <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" style="width: 80%;">
-
     <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -15,12 +15,11 @@
 
     <!-- Slides -->
     <div class="carousel-inner">
-
       <!-- First Slide -->
       <div class="carousel-item active" data-bs-interval="10000">
         <img src="{% static 'media/courscel_img_1.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+          <div class="card bg-white" style="opacity: 0.85;">
             <div class="card-body text-dark">
               <h3 class="card-title">Stay Safe</h3>
               <h6 class="card-subtitle mb-2 text-muted">Protecting Citizens First</h6>
@@ -36,7 +35,7 @@
       <div class="carousel-item" data-bs-interval="2000">
         <img src="{% static 'media/courscel_img_2.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="Second slide">
         <div class="carousel-caption d-none d-md-block">
-          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+          <div class="card bg-white" style="opacity: 0.85;">
             <div class="card-body text-dark">
               <h3 class="card-title">Safety First</h3>
               <h6 class="card-subtitle mb-2 text-muted">Protecting Lives Through Innovation</h6>
@@ -52,7 +51,7 @@
       <div class="carousel-item">
         <img src="{% static 'media/courscel_img_3.jpg' %}" class="d-block w-100 img-fluid" style="height: 600px; object-fit: cover;" alt="Third slide">
         <div class="carousel-caption d-none d-md-block">
-          <div class="card bg-white" style="width: 100%; opacity: 0.85;">
+          <div class="card bg-white" style="opacity: 0.85;">
             <div class="card-body text-dark">
               <h3 class="card-title">Trusted Solutions</h3>
               <h6 class="card-subtitle mb-2 text-muted">A Future of Security and Trust</h6>
@@ -63,7 +62,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Navigation controls -->
@@ -77,4 +75,88 @@
     </button>
   </div>
 </div>
+
+<!-- About Us Section -->
+<section class="py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4">We Value Your Safety</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <p>
+          The security of citizens is the foundation of a thriving, resilient community, and it is our collective responsibility to safeguard it for future generations. Ensuring safety goes beyond crime prevention; it encompasses fostering environments where individuals feel protected in their homes, workplaces, and public spaces. By investing in advanced technology, community policing, education, and mental health support, we can create a society that prioritizes well-being and trust. Empowering citizens through awareness and collaboration strengthens communal bonds, making it harder for insecurity to take root. As we build this foundation today, we ensure a safer, more inclusive future for upcoming generations, where every individual can live without fear and thrive in a harmonious society.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <img src="{% static 'media/community.jpeg' %}" class="img-fluid rounded" style="height: 50vh" alt="Community">
+      </div>
+      <section>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <img src="{% static 'media/next_generation.jpeg' %}" class="img-fluid rounded" style="height: 50vh" alt="">
+          </div>
+          <div class="col-lg-6 mb-4">
+            <p>
+            A generation where our future generations find
+              comfort and a reason to smile is one built on the foundations
+              of empathy, innovation, and sustainability.
+              It's a society where every individual feels valued, supported, and empowered
+              to pursue their dreams without fear or limitations. By fostering inclusivity, investing in
+              education, and addressing environmental and social challenges, we create a world where hope
+              thrives, opportunities are abundant, and happiness is shared across all walks of life.
+              This vision ensures that our children and grandchildren inherit a world that not only meets their
+              needs but also inspires them to build an even brighter future.
+          </p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Product Safety Testing</h5>
+            <p class="card-text">Rigorous testing processes to ensure the utmost protection and reliability.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Innovative Engineering</h5>
+            <p class="card-text">Cutting-edge technology solutions designed to meet evolving safety challenges.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Community Support</h5>
+            <p class="card-text">Dedicated to strengthening communities through education and protection services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4">How to reach out</h2>
+    <p class="text-center">
+
+    </p>
+    <div class="text-center">
+      <button class="btn btn-primary">Get in Touch</button>
+    </div>
+  </div>
+</section>
 {% endblock %}

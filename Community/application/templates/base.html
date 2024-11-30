@@ -14,14 +14,19 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: rgba(255,255,255,0.5);">
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(250, 250, 250);">
+            <hr>
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'index' %}">Brand</a>
+                <!-- Logo -->
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'media/logo.jpg' %}" alt="Logo" style="height: 40px;">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Centering navbar items -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
                         </li>
@@ -53,13 +58,12 @@
     {% endblock %}
 
     <footer style="flex: auto; display: flex; align-items: end; justify-content: center; background-color: olivedrab;">
-        <ul style="list-style: none; gap: 50px; padding: 0;">
+        <ul style="list-style: none; display: flex; gap: 50px; padding: 0;">
             <li><a href="#"><i class="bi bi-linkedin" aria-label="LinkedIn"></i></a></li>
             <li><a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a></li>
             <li><a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a></li>
             <li><p>Copyright &copy; 2024</p></li>
         </ul>
-
     </footer>
 
     <!-- Bootstrap JS and Popper.js -->
