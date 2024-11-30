@@ -4,8 +4,8 @@
 
 {% block content %}
 <!-- Carousel Section -->
-<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: white;">
-  <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" style="width: 80%;">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: white; padding: 0;">
+  <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" style="width: 80%; border-radius: 10px;">
     <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -77,86 +77,72 @@
 </div>
 
 <!-- About Us Section -->
-<section class="py-5" style="background-color: #f8f9fa;">
+<section class="py-5" style="background-color: #f8f9fa; padding: 40px 0;">
   <div class="container">
-    <h2 class="text-center mb-4">We Value Your Safety</h2>
+    <h2 class="text-center mb-4" style="font-size: 2.5rem; font-weight: bold;">We Value Your Safety</h2>
     <div class="row align-items-center">
       <div class="col-lg-6 mb-4">
-        <p>
-          The security of citizens is the foundation of a thriving, resilient community, and it is our collective responsibility to safeguard it for future generations. Ensuring safety goes beyond crime prevention; it encompasses fostering environments where individuals feel protected in their homes, workplaces, and public spaces. By investing in advanced technology, community policing, education, and mental health support, we can create a society that prioritizes well-being and trust. Empowering citizens through awareness and collaboration strengthens communal bonds, making it harder for insecurity to take root. As we build this foundation today, we ensure a safer, more inclusive future for upcoming generations, where every individual can live without fear and thrive in a harmonious society.
+        <p style="font-size: 1.1rem; line-height: 1.6;">
+          The security of citizens is the foundation of a thriving, resilient community, and it is our collective responsibility to safeguard it for future generations...
         </p>
       </div>
       <div class="col-lg-6 mb-4">
-        <img src="{% static 'media/community.jpeg' %}" class="img-fluid rounded" style="height: 50vh" alt="Community">
+        <img src="{% static 'media/community.jpeg' %}" class="img-fluid rounded" style="height: 60vh; width: 100%; object-fit: cover;" alt="Community">
       </div>
-      <section>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4">
-            <img src="{% static 'media/next_generation.jpeg' %}" class="img-fluid rounded" style="height: 50vh" alt="">
-          </div>
-          <div class="col-lg-6 mb-4">
-            <p>
-            A generation where our future generations find
-              comfort and a reason to smile is one built on the foundations
-              of empathy, innovation, and sustainability.
-              It's a society where every individual feels valued, supported, and empowered
-              to pursue their dreams without fear or limitations. By fostering inclusivity, investing in
-              education, and addressing environmental and social challenges, we create a world where hope
-              thrives, opportunities are abundant, and happiness is shared across all walks of life.
-              This vision ensures that our children and grandchildren inherit a world that not only meets their
-              needs but also inspires them to build an even brighter future.
+    </div>
+
+    <section>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <img src="{% static 'media/next_generation.jpeg' %}" class="img-fluid rounded" style="height: 60vh; width: 100%; object-fit: cover;" alt="Next Generation">
+        </div>
+        <div class="col-lg-6 mb-4">
+          <p style="font-size: 1.1rem; line-height: 1.6;">
+            A generation where our future generations find comfort and a reason to smile is one built on the foundations of empathy, innovation, and sustainability...
           </p>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
-</section>
-
-<!-- Our Services Section -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Services</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Product Safety Testing</h5>
-            <p class="card-text">Rigorous testing processes to ensure the utmost protection and reliability.</p>
-          </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Innovative Engineering</h5>
-            <p class="card-text">Cutting-edge technology solutions designed to meet evolving safety challenges.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Community Support</h5>
-            <p class="card-text">Dedicated to strengthening communities through education and protection services.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
 </section>
 
 <!-- Contact Us Section -->
+<!-- Contact Us Section -->
 <section class="py-5" style="background-color: #f8f9fa;">
-  <div class="container">
-    <h2 class="text-center mb-4">How to reach out</h2>
-    <p class="text-center">
+  <div class="container" style="width: 50%; justify-content: center; display: flex; padding: 40px;">
+    <h2 class="text-center mb-4" style="font-size: 2rem; font-weight: bold;">How to Reach Out</h2>
+    <form style="width: 100%;">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="padding: 12px;">
+        <div id="emailHelp" class="form-text" style="font-size: 0.9rem;">We'll never share your email with anyone else.</div>
+      </div>
 
-    </p>
-    <div class="text-center">
-      <button class="btn btn-primary">Get in Touch</button>
-    </div>
+      <!-- Location Select -->
+      <div class="mb-3">
+        <label for="locationSelect" class="form-label">Select Location</label>
+        <select class="form-select" id="locationSelect" style="padding: 12px;">
+          <option selected disabled>Select your location</option>
+          <option value="location1">Location 1</option>
+          <option value="location2">Location 2</option>
+          <option value="location3">Location 3</option>
+          <option value="location4">Location 4</option>
+          <!-- Add more locations as needed -->
+        </select>
+      </div>
+
+      <!-- Message Textarea -->
+      <div class="mb-3">
+        <label for="exampleInputMessage" class="form-label">Report Incident</label>
+        <textarea class="form-control" id="exampleInputMessage" rows="4" placeholder="Explain the incident briefly" style="padding: 12px;"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" style="background-color: #007bff; border: none; padding: 12px 20px; font-size: 1rem;">Submit</button>
+    </form>
   </div>
 </section>
+
+
+
 {% endblock %}

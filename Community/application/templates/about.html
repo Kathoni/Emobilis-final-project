@@ -1,8 +1,40 @@
 {% extends 'base.html' %}
-{% block title %}
+{% block title %}{% load static %}
 About
 {% endblock %}
 {% block content %}
-<h4>This is the content of the index page</h4>
+<h2 class="text-center mb-4">We Value Your Safety</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <p>
+          The security of citizens is the foundation of a thriving, resilient community, and it is our collective responsibility to safeguard it for future generations. Ensuring safety goes beyond crime prevention; it encompasses fostering environments where individuals feel protected in their homes, workplaces, and public spaces. By investing in advanced technology, community policing, education, and mental health support, we can create a society that prioritizes well-being and trust. Empowering citizens through awareness and collaboration strengthens communal bonds, making it harder for insecurity to take root. As we build this foundation today, we ensure a safer, more inclusive future for upcoming generations, where every individual can live without fear and thrive in a harmonious society.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <img src="{% static 'media/community.jpeg' %}" class="img-fluid rounded" style="height: 60vh; width: 80%;" alt="Community">
+      </div>
+      <section>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <img src="{% static 'media/next_generation.jpeg' %}" class="img-fluid rounded" style="height: 60vh; width: 80%" alt="">
+          </div>
+          <div class="col-lg-6 mb-4">
+            <p>
+            A generation where our future generations find
+              comfort and a reason to smile is one built on the foundations
+              of empathy, innovation, and sustainability.
+              It's a society where every individual feels valued, supported, and empowered
+              to pursue their dreams without fear or limitations. By fostering inclusivity, investing in
+              education, and addressing environmental and social challenges, we create a world where hope
+              thrives, opportunities are abundant, and happiness is shared across all walks of life.
+              This vision ensures that our children and grandchildren inherit a world that not only meets their
+              needs but also inspires them to build an even brighter future.
+          </p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
 
 {% endblock %}

@@ -39,6 +39,9 @@ def report_crime(request):
         form = CrimeReportForm()
     return render(request, 'crime/report_crime.html', {'form': form})
 
-def crime_reports(request):
+def crimereports(request):
     reports = CrimeReport.objects.all()  # You could filter this by the user's location
-    return render(request, 'crime/crime_reports.html', {'reports': reports})
+    return render(request, 'crime/crimereports.html', {'reports': reports})
+
+def blog(request):
+    return render(request, 'blog.html')
