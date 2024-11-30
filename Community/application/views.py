@@ -27,17 +27,17 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
 
-def report_crime(request):
+def report(request):
     if request.method == "POST":
         form = CrimeReportForm(request.POST)
         if form.is_valid():
-            crime_report = form.save(commit=False)
-            crime_report.user = request.user  # Link the report to the logged-in user
-            crime_report.save()
+            report = form.save(commit=False)
+            report.user = request.user  # Link the report to the logged-in user
+            report.save()
             return redirect('index')  # Redirect after successful crime report submission
     else:
         form = CrimeReportForm()
-    return render(request, 'crime/report_crime.html', {'form': form})
+    return render(request, 'report/report.html', {'form': form})
 
 def crimereports(request):
     reports = CrimeReport.objects.all()  # You could filter this by the user's location
