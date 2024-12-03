@@ -9,13 +9,12 @@ from application.forms import ReportForm
 
 from application.forms import BlogForm
 
+from application.forms import SettingsForm
+
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-
-def settings(request):
-    return render(request, 'settings.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -39,6 +38,8 @@ def blog(request):
     post = BlogForm
     return render(request, 'blog.html', {'post': post})
 
-
+def settings(request):
+    settings = SettingsForm()
+    return render(request, 'settings.html', {'settings': settings})
 
 

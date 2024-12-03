@@ -6,6 +6,8 @@ from application.models import Report
 
 from application.models import Blog
 
+from application.models import Settings
+
 
 class CitizenForm(forms.ModelForm):
     class Meta:
@@ -62,4 +64,24 @@ class BlogForm(forms.ModelForm):
 
         }
 
+class SettingsForm(forms.ModelForm):
+    class Meta:
+
+        model = Settings
+        fields = '__all__'
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your name'}),
+            'age': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter your age'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email'}),
+            'gender': forms.Select(attrs={'class': 'form-control'},
+                                   choices=[('', 'Select your gender')] + list(Citizen.GENDER_CHOICES)),
+            'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password'}),
+            'image': forms.ClearableFileInput(attrs={
+                'class': 'form-control',
+                'accept': 'image/*',
+                'title': 'Upload image here'})
+
+
+
+        }
 

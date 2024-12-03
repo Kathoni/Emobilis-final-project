@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="{% static 'media/logo.jpg' %}" alt="Logo" style="height: 40px;">
+                    <img src="{% static 'media/logo.jpg' %}" alt="Logo" style="height: 30px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -67,6 +67,7 @@
             </div>
         </nav>
     </header>
+
 
     {% block content %}
     {% endblock %}
