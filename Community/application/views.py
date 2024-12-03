@@ -1,6 +1,14 @@
 from django.contrib.auth import login
 from django.shortcuts import render
 
+from application.forms import CitizenForm
+
+from application.forms import LoginForm
+
+from application.forms import ReportForm
+
+from application.forms import BlogForm
+
 
 # Create your views here.
 def index(request):
@@ -14,6 +22,23 @@ def about(request):
 
 
 def register(request):
-    return render(request, 'register.html')
+    form = CitizenForm()
+    return render(request, 'register.html', {'form': form})
+
+
+def report(request):
+    report = ReportForm()
+    return render(request, 'report.html', {"report": report} )
+
+
+def login(request):
+    login = LoginForm()
+    return render(request, 'login.html', {'login': login} )
+
+def blog(request):
+    post = BlogForm
+    return render(request, 'blog.html', {'post': post})
+
+
 
 

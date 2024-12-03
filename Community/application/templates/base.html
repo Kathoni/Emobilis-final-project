@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: rgb(250, 250, 250);">
+        <nav class="navbar navbar-expand-lg" style="background-color: gainsboro;">
             <hr>
             <div class="container-fluid">
                 <!-- Logo -->
@@ -33,9 +33,15 @@
                         <li class="nav-item me-3">
                             <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
                         </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="{% url 'report' %}">Report</a>
+                        </li>
+                         <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Post</a>
+                        </li>
                         <li class="nav-item dropdown me-3">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Join
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -56,10 +62,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -70,7 +73,7 @@
 
     <footer style="flex: auto; display: flex; align-items: end; justify-content: center; background-color: olivedrab;">
         <ul style="list-style: none; display: flex; gap: 50px; padding: 0;">
-            <li><a href="#"><i class="bi bi-linkedin" aria-label="LinkedIn"></i></a></li>
+            <li><a href="#"><i class="bi bi-linkedin" aria-label="LinkedIn" style="height: 50v"></i></a></li>
             <li><a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a></li>
             <li><a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a></li>
             <li><p>Copyright &copy; 2024</p></li>
