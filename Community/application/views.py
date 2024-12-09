@@ -41,5 +41,9 @@ def blog(request):
 def settings(request):
     settings = SettingsForm()
     return render(request, 'settings.html', {'settings': settings})
+def logout(request):
+    return render(request, 'logout.html')
 
+def user(request):
+    return render(request, 'user.html')
 

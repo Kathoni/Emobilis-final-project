@@ -13,62 +13,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: gainsboro;">
-            <hr>
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="{% static 'media/logo.jpg' %}" alt="Logo" style="height: 30px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Navbar items centered and inline -->
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="{% url 'report' %}">Report</a>
-                        </li>
-                         <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Post</a>
-                        </li>
-                        <li class="nav-item dropdown me-3">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Join
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'login' %}">
-                                        <i class="bi bi-box-arrow-in-right"></i> Login
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'settings' %}">
-                                        <i class="bi bi-gear"></i> Settings
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'register' %}">
-                                        <i class="bi bi-person-plus"></i> Create Account
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+   <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: gainsboro;">
+        <hr>
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'media/logo.jpg' %}" alt="Logo" style="height: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navbar items centered and inline -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="{% url 'report' %}">Report</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Post</a>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Join
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'login' %}">
+                                    <i class="bi bi-box-arrow-in-right"></i> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'settings' %}">
+                                    <i class="bi bi-gear"></i> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'register' %}">
+                                    <i class="bi bi-person-plus"></i> Create Account
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-                </div>
+                <!-- Profile Link (pushed to the right) -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'user' %}">
+                            <i class="bi bi-person"></i> Profile
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-
-
+        </div>
+    </nav>
+</header>
     {% block content %}
     {% endblock %}
 
